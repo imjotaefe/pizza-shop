@@ -2,9 +2,10 @@ import { useQuery } from "@tanstack/react-query"
 import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../../../components/ui/dialog"
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "../../../components/ui/table"
 import { getOrderDetails } from "../../../api/get-order-details"
-import { OrderStatus } from "./order-status"
+import { OrderStatus } from "../../../components/OrderStatus"
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from "date-fns/locale"
+import { OrderDetailsSkeleton } from "./order-details-skeleton"
 
 
 export interface OrderDetailsProps {
@@ -26,7 +27,7 @@ export const OrderDetails = ({ orderId, open }: OrderDetailsProps) => {
         <DialogDescription>detalhes do pedido</DialogDescription>
       </DialogHeader>
 
-     {order &&  
+     {order ?  
       <div className="space-y-6">
         <Table>
           <TableBody>
@@ -95,7 +96,9 @@ export const OrderDetails = ({ orderId, open }: OrderDetailsProps) => {
             </TableRow>
           </TableFooter>
         </Table>
-      </div>}
+      </div> : (
+        <OrderDetailsSkeleton />
+      )}
     </DialogContent>
   )
 }

@@ -3,7 +3,7 @@ import { Button } from "../../../components/ui/button";
 import { TableCell, TableRow } from "../../../components/ui/table";
 import { Dialog, DialogTrigger } from "../../../components/ui/dialog";
 import { OrderDetails } from "./order-details";
-import { OrderStatus } from "./order-status";
+import { OrderStatus } from "../../../components/OrderStatus";
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { useState } from "react";
