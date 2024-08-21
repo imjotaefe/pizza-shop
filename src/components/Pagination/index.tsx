@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from '@/components/ui/button';
 
 export interface PaginationProps {
   pageIndex: number
@@ -19,7 +19,7 @@ export const Pagination = ({pageIndex, perPage, totalCount, onPageChange}: Pagin
       <div className="flex items-center gap-6 lg:gap-8">
         <div className="text-sm font-medium">Página {pageIndex + 1} de {pages}</div>
         <div className="flex items-center gap-2">
-          <Button 
+          <Button
             onClick={() => onPageChange(0)} 
             variant="outline" 
             className="h-8 w-8 p-0"

@@ -3,7 +3,7 @@ import { MonthRevenueCard } from "./month-revenue-card";
 import { MonthOrdersAmountCard } from "./month-orders-amount-card";
 import { DayOrdersAmountCard } from "./day-orders-amount-card";
 import { MonthCanceledOrdersAmountCard } from "./month-canceled-orders-amount-card";
-import { RevenueChart } from "./revenue-charts";
+import { RevenueChart } from "./revenue-chart";
 import { PopularChart } from "./popular.products.charts";
 
 export function Dashboard() {
