@@ -27,7 +27,7 @@ export const RevenueChart = () => {
   const chartData = useMemo(() => {
     return dailyRevenueInPeriod?.map(chartItem => {
       return {
-        date: chartItem.data,
+        date: chartItem.date,
         receipt: chartItem.receipt /100
       }
     })
